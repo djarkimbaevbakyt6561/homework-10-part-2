@@ -30,6 +30,7 @@ const Products = ({ onClick, products }) => {
         products.forEach((el) => {
             total += el.price;
         });
+        
         dispatchTotalPrice({ type: CALCULATE_IN_RENDER, total: total })
     }
     ;

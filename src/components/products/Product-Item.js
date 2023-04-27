@@ -26,9 +26,11 @@ const ProductItem = ( {onPriceChange, onClick, id, image, title,  price, number 
       onPriceChange(price);
     }
     
-    function minusHandler() {
-      dispatchCount({ type: MINUS });
-      onPriceChange(-price);
+   function minusHandler() {
+      if (count.count > 0) {
+         dispatchCount({ type: MINUS });
+         onPriceChange(-price);
+      }
     }
    return (
       <ProductContainer>
